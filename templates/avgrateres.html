@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find the average rating of a particular faculty for a course.</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+<table border="2">
+	<tr>
+		<td colspan="4">CourseId</td>
+        <td colspan="4">Rating</td>
+	</tr>
+</table>
+{% for lines in ret %}
+<table border="2">
+	<tr>
+		<td colspan="4">{{lines['CourseId']}}</td>
+		<td colspan="4">{{lines['rating']}}</td>
+	</tr>
+</table>
+{% end %}
+<form method="get/post" action="/admin"><input type="submit" value="BACK"></form>
+</body>
+</html>

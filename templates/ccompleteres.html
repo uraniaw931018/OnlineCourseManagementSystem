@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+{% if flag==1 %}
+<p>Student {{si}} has completed course {{ci}}!<br>
+{% else %}
+<p>Update for Student {{si}} has done!<br>
+{% end %}
+<form method="get/post" action="/student"><input type="submit" value="BACK"></form>
+</body>
+</html>

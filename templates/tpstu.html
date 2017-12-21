@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top students in each course</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+<table border="2">
+	<tr>
+		<td colspan="4">UserId</td>
+		<td colspan="4">CourseId</td>
+		<td colspan="4">Name</td>
+		<td colspan="4">Avg_score</td>
+	</tr>
+</table>
+{% for lines in ret %}
+<table border="2">
+	<tr>
+		<td colspan="4">{{lines['UserId']}}</td>
+		<td colspan="4">{{lines['CourseId']}}</td>
+		<td colspan="4">{{lines['Name']}}</td>
+		<td colspan="4">{{lines['avg_score']}}</td>
+	</tr>
+</table>
+{% end %}
+<form method="get/post" action="/admin"><input type="submit" value="BACK"></form>
+</body>
+</html>

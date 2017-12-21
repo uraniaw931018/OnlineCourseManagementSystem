@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Materials Searching result</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+<table border="2">
+    <td colspan="4">UserID</td>
+    <td colspan="4">CourseID</td>
+    <td colspan="4">Status</td>
+    <td colspan="4">Rating</td>
+    <td colspan="4">Comments</td>
+    <td colspan="4">Date</td>
+    <td colspan="4">TotalScore</td>
+    <td colspan="4">Order</td>
+</table>
+{% for lines in ret %}
+<table border="2">
+	<tr>
+        <td colspan="4">{{lines['UserID']}}</td>
+        <td colspan="4">{{lines['CourseID']}}</td>
+        <td colspan="4">{{lines['Status']}}</td>
+        <td colspan="4">{{lines['Rating']}}</td>
+		<td colspan="4">{{lines['Comments']}}</td>
+        <td colspan="4">{{lines['Date']}}</td>
+        <td colspan="4">{{lines['TotalScore']}}</td>
+        <td colspan="4">
+            <form method="post" action="/ccompleteres">
+                {{lines['Order']}}
+                <input type="hidden" value={{lines['Order']}} name="od">
+                <input type="hidden" value={{lines['CourseID']}} name="ci">
+                <input type="submit" value="complete this!">
+            </form></td>
+    </tr>
+</table>
+
+{% end %}
+</body>
+</html>

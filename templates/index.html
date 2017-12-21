@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+<h1>Enter terms below.</h1>
+<form method="post" action="/register">
+    <p>userID<br><input type="text" name="ui"></p>
+    <p>FirstName<br><input type="text" name="fn"></p>
+    <p>LastName<br><input type="text" name="ln"></p>
+    <p>Password<br><input type="text" name="pw"></p>
+    <p>ProfilePic<br><input type="text" name="pp"></p>
+    <p>Street<br><input type="text" name="st"></p>
+    <p>City<br><input type="text" name="ci"></p>
+    <p>Postal Code<br><input type="text" name="pc"></p>
+    <p>Country<br><input type="text" name="co"></p>
+    <p>usertype<br><input type="text" name="ut"></p>
+    <input type="submit">
+</form>
+</body>
+</html>
+<!--INSERT INTO `User` (`UserID`,`FirstName`,`LastName`,`Password`,`ProfilePic`,`Street`,`City`,`Postal Code`,`Country`,'usertype')-->
+ <!--VALUES ('bjn.hansen@yahoo.no','Bjn','Hann','663666',NULL,'Ullevålsveien 14','Oslo',171,'Norway','S');-->

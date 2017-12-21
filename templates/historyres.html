@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My account history</title>
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+	<table border="2">
+	<tr>
+		<td colspan="4">UserId</td>
+		<td colspan="4">FirstName</td>
+		<td colspan="4">LastName</td>
+		<td colspan="4">CourseId</td>
+		<td colspan="4">Name</td>
+		<td colspan="4">CourseStatus</td>
+		<td colspan="4">date</td>
+		<td colspan="4">Payment Code</td>
+		<td colspan="4">Total</td>
+	</tr>
+</table>
+{% for lines in ret %}
+<table border="2">
+	<tr>
+		<td colspan="4">{{lines['UserId']}}</td>
+		<td colspan="4">{{lines['FirstName']}}</td>
+		<td colspan="4">{{lines['LastName']}}</td>
+		<td colspan="4">{{lines['CourseId']}}</td>
+		<td colspan="4">{{lines['Name']}}</td>
+		<td colspan="4">{{lines['CourseStatus']}}</td>
+		<td colspan="4">{{lines['date']}}</td>
+		<td colspan="4">{{lines['Payment Code']}}</td>
+		<td colspan="4">{{lines['Total']}}</td>
+	</tr>
+</table>
+{% end %}
+<form method="get/post" action="/student"><input type="submit" value="BACK"></form>
+</body>
+</html>

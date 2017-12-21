@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unfinished courses for students</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+<table border="2">
+	<tr>
+		<td colspan="4">UserId</td>
+		<td colspan="4">CourseId</td>
+		<td colspan="4">Mtl</td>
+		<td colspan="4">Type</td>
+        <td colspan="4">Status</td>
+	</tr>
+</table>
+{% for lines in ret %}
+<table border="2">
+	<tr>
+		<td colspan="4">{{lines['id']}}</td>
+		<td colspan="4">{{lines['cid']}}</td>
+		<td colspan="4">{{lines['mtl']}}</td>
+		<td colspan="4">{{lines['type']}}</td>
+        <td colspan="4">{{lines['status']}}</td>
+	</tr>
+</table>
+{% end %}
+<form method="get/post" action="/admin"><input type="submit" value="BACK"></form>
+</body>
+</html>

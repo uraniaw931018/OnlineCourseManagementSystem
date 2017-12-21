@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find the most popular question for each course.</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+<table border="2">
+	<tr>
+		<td colspan="4">QuestionId</td>
+		<td colspan="4">CourseId</td>
+		<td colspan="4">Course Name</td>
+		<td colspan="4">likes</td>
+        <td colspan="4">Orderid</td>
+        <td colspan="4">Type</td>
+	</tr>
+</table>
+{% for lines in ret %}
+<table border="2">
+	<tr>
+		<td colspan="4">{{lines['qid']}}</td>
+		<td colspan="4">{{lines['courseid']}}</td>
+		<td colspan="4">{{lines['course']}}</td>
+		<td colspan="4">{{lines['likes']}}</td>
+        <td colspan="4">{{lines['ord']}}</td>
+        <td colspan="4">{{lines['type']}}</td>
+	</tr>
+</table>
+{% end %}
+<form method="get/post" action="/admin"><input type="submit" value="BACK"></form>
+</body>
+</html>
